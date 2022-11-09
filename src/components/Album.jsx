@@ -68,7 +68,16 @@ const cards = [
     },
 ];
 
-const theme = createTheme();
+const theme = createTheme({
+    palette: {
+        primary: {
+            light: '#3282B8',
+            main: '#0F4C75',
+            dark: '#1B262C',
+            contrastText: '#BBE1F1',
+        }
+    },
+});
 
 export default function Album() {
     return (
@@ -78,7 +87,6 @@ export default function Album() {
                 {/* Hero unit */}
                 <Box
                     sx={{
-                        bgcolor: 'background.paper',
                         pt: 8,
                         pb: 6,
                     }}
@@ -88,15 +96,14 @@ export default function Album() {
                             component="h1"
                             variant="h2"
                             align="center"
-                            color="text.primary"
+                            color="primary.dark"
                             gutterBottom
                         >
                             Global Classroom
                         </Typography>
-                        <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                            Create a basic, simple landing page to include all products made together:
-                            the coding lessons, the public life study lessons, everything else the teams
-                            find interesting, relevant or just fun to be shared.
+                        <Typography variant="h5" align="center" color="primary.dark" paragraph>
+                            Welcome to our dream city gallery. These pictures were made using the AI art generator named Midjourney.
+                            Our goal was to create a story about the city of our dreams. We hope you enjoy it!
                         </Typography>
                     </Container>
                 </Box>
@@ -110,12 +117,9 @@ export default function Album() {
                                 >
                                     <CardMedia
                                         component="img"
-                                        // sx={{
-                                        //     // 16:9
-                                        //     pt: '56.25%',
-                                        // }}
                                         image={card.image}
-                                        alt="random"
+                                        alt={card.imageText}
+                                        height="100%"
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h5" component="h2">
@@ -133,7 +137,7 @@ export default function Album() {
                 </Container>
             </main>
             {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+            <Box sx={{ p: 6 }} component="footer">
                 <Typography variant="h6" align="center" gutterBottom>
                     Footer
                 </Typography>
