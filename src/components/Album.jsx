@@ -168,10 +168,11 @@ export default function Album() {
                     </Container>
                 </Box>
 
-                <AudioPlayer
-                    autoPlay
-                    src={dreamCity}
-                />
+                <Container sx={{ py: 4 }} maxWidth="xl">
+                    <AudioPlayer
+                        src={dreamCity}
+                    />
+                </Container>
 
                 {/* container with margin bottom */}
                 <Container maxWidth="xl" sx={{ pb: 4 }}>
