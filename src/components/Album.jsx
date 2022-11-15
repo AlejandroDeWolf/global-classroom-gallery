@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import AudioPlayer from 'material-ui-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 import dreamCity from '/assets/dream-city.mp4';
 import pic1 from '/assets/image1.png';
@@ -167,9 +168,10 @@ export default function Album() {
                     </Container>
                 </Box>
 
-                {/* <Container sx={{ py: 8 }} maxWidth="xl">
-                    <AudioPlayer src={dreamCity} />
-                </Container> */}
+                <AudioPlayer
+                    autoPlay
+                    src={dreamCity}
+                />
 
                 {/* container with margin bottom */}
                 <Container maxWidth="xl" sx={{ pb: 4 }}>
