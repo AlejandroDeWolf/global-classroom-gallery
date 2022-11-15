@@ -1,19 +1,17 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'material-ui-audio-player';
 
+import dreamCity from '/assets/dream-city.mp4';
 import pic1 from '/assets/image1.png';
 import pic2 from '/assets/image2.png';
 import pic3 from '/assets/image3.png';
@@ -21,8 +19,6 @@ import pic4 from '/assets/image4.png';
 import pic5 from '/assets/image5.png';
 import pic6 from '/assets/image6.png';
 import pic7 from '/assets/image7.png';
-import pic8 from '/assets/image8.png';
-import pic9 from '/assets/image9.png';
 import pic10 from '/assets/image10.png';
 import pic11 from '/assets/image11.png';
 import pic12 from '/assets/image12.png';
@@ -46,85 +42,85 @@ function Copyright() {
 
 const cards = [
     {
-        title: 'Coding session',
+        title: 'Image 1',
         description: 'Sophia wakes up early in the morning, she has to go to her elementary school.',
         image: pic1,
         imageText: 'Image Text',
     },
     {
-        title: 'City knowledge session',
+        title: 'Image 2',
         description: 'Today is THE special day, she enthusiastically wakes up her older sister Emily so she can go along with her on her way to school.',
         image: pic2,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 3',
         description: 'They walk through the neighbourhood, a couple of blocks and they arrive at their destination.',
         image: pic3,
         imageText: 'Image Text',
     },
     {
-        title: 'Coding session',
+        title: 'Image 4',
         description: 'Emily waves goodbye for her sister and walks to her part-time job in a restaurant, on her way she goes through unique places.',
         image: pic4,
         imageText: 'Image Text',
     },
     {
-        title: 'City knowledge session',
+        title: 'Image 5',
         description: 'Some places have a lot of local fauna because the place is respectful and friendly with them.',
         image: pic5,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 6',
         description: 'Other places have a lot of children playing outside, others have people passing by but that does not make the place less walkable.',
         image: pic6,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 7',
         description: 'She finally arrives at her workplace, a historic building which has been renovated with a modern restaurant on the inside, which gives the place a unique touch.',
         image: pic7,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 8',
         description: 'Emily meets Michael, her boss, who tells her that today it was not necessary for her to come to work considering today is THE special day. Emily still decides to stay because she loves her job.',
         image: pic10,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 9',
         description: 'At the end of today’s working day, Michael closes the restaurant and because today is THE special day he goes to his friend Mr James, an old man with walking disability.',
         image: pic11,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 10',
         description: 'To get to his destiny, Michael has to cross a river.',
         image: pic12,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 11',
         description: 'Despite being in the middle of the city, it is still accessible as there are many bridges that keep both sides of the city connected.',
         image: pic14,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 12',
         description: 'Finally Michael meets Mr. James in the city’s Great Park, a place with lots of greenery and biophilic buildings around it.',
         image: pic13,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 13',
         description: 'Turns out that Mr. James is the mayor of the city and has invited all of its inhabitants to celebrate the anniversary of the city.',
         image: pic15,
         imageText: 'Image Text',
     },
     {
-        title: 'General meeting',
+        title: 'Image 14',
         description: 'Little Sophia, young Emily, Michael the restaurateur and the visionary Mr. James who has helped create the great city that we have been dreaming of.',
         image: pic16,
         imageText: 'Image Text',
@@ -170,11 +166,9 @@ export default function Album() {
                         </Typography>
                     </Container>
                 </Box>
-                <ReactAudioPlayer
-                    src="/assets/dream-city.mp4"
-                    controls
-                    style={{ width: '50%', marginBottom: "48px" }}
-                />
+                <Container sx={{ py: 8 }} maxWidth="xl">
+                    <AudioPlayer src={dreamCity} />
+                </Container>
 
                 {/* container with margin bottom */}
                 <Container maxWidth="xl" sx={{ pb: 4 }}>
@@ -225,7 +219,7 @@ export default function Album() {
                                         height="100%"
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
-                                        <Typography>
+                                        <Typography align='left'>
                                             {card.description}
                                         </Typography>
                                     </CardContent>
