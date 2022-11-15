@@ -166,6 +166,7 @@ export default function Album() {
                         </Typography>
                     </Container>
                 </Box>
+
                 <Container sx={{ py: 8 }} maxWidth="xl">
                     <AudioPlayer src={dreamCity} />
                 </Container>
